@@ -8,7 +8,6 @@ from fabric.api import run
 
 env.hosts = ['100.25.19.204', '54.157.159.85']
 
-
 def do_pack():
     """Create a tar gzipped archive of the directory web_static."""
     dt = datetime.utcnow()
@@ -65,7 +64,6 @@ def do_deploy(archive_path):
            format(name)).failed is True:
         return False
     return True
-
 
 def deploy():
     """Create and distribute an archive to a web server."""
